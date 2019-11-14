@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+  }
+
+  .container {
+    background-color: white;
+    height: calc(100vh - 20px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+  }
+
+  #code {
+    font-size: 14px;
+    align-self: center;
+    color: blue;
+    padding: 0px 100px 0 20px;
+    line-height: 0pt;
+  }
+
+  /** Flex Container here **/
+  .flex-container {
+    /* display: flex; */
+    display: inline-flex;
+    border: 1px solid black;
+  }
+
+  #myTextarea,
+  #myTextarea1,
+  #myTextarea2 {
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 20px 0px 0 20px;
+
+    align-self: center;
+  }
+
+  heading {
+    font-weight: bold;
+    font-size: 26px;
+    color: green;
+  }
+</style>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox 01</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <heading>Lesson: Flex Container</heading>
+
+    <div class="flex-container">
+      <div id='code'>
+        <h1>HTML</h1>
+        <textarea id='myTextarea' rows="20" cols="50" spellcheck="false">
+              If you see me. missing live-server or Fetch text file.
+              </textarea>
+        <iframe style="border:none; width:640px;height:480px;overflow-y:hidden;" seamless src='sample.html'></iframe>
+      </div>
+    </div>
+
+
+    <div class="flex-container">
+      <div id='code'>
+        <textarea id='myTextarea1' rows="15" cols="40" spellcheck="false">
+            If you see me. missing live-server or Fetch text file.
+          </textarea>
+      </div>
+      <iframe style="border:none; width:640px;height:480px;overflow-y:hidden;" seamless src='ex1.html'></iframe>
+    </div>
+    <div class="flex-container">
+      <div id='code'>
+        <textarea id='myTextarea2' rows="15" cols="40" spellcheck="false">
+              If you see me. missing live-server or Fetch text file.
+            </textarea>
+      </div>
+      <iframe style="border:none; width:640px;height:480px;overflow-y:hidden;" seamless src='ex2.html'></iframe>
+    </div>
+
+
+
+
+
+  </div>
+  <script>
+    function loadText() {
+      fetch("sample.txt")
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (data) {
+          document.getElementById("myTextarea").value = data;
+        })
+    }
+    function loadText1() {
+      fetch("ex1.txt")
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (data1) {
+          document.getElementById("myTextarea1").value = data1;
+        })
+    }
+    function loadText2() {
+      fetch("ex2.txt")
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (data2) {
+          document.getElementById("myTextarea2").value = data2;
+        })
+    }
+
+
+    loadText();
+    loadText1();
+    loadText2();
+
+
+  </script>
+</body>
+
+</html>

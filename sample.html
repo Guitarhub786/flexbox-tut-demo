@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<style>
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    background: #ff9966;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .container {
+    background-color: white;
+    height: calc(100vh - 20px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+  }
+
+  h2 {
+    color: white;
+  }
+
+  /** Flex Container here **/
+  .flex-container {
+    /* display: flex; */
+    /* display: inline-flex; */
+    border: 5px solid black;
+  }
+
+  .flex-element {
+    padding: 10px;
+    background-color: #E53935;
+  }
+
+  .flex-element:nth-child(2) {
+    background-color: #8E24AA;
+  }
+
+  .flex-element:nth-child(3) {
+    background-color: #3F51B5;
+  }
+</style>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flexbox 01</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Learning Flexbox</h1>
+    <div class="flex-container">
+      <div class="flex-element element-1">
+        <h2>Service #1</h2>
+      </div>
+      <div class="flex-element element-2">
+        <h2>Service #2</h2>
+      </div>
+      <div class="flex-element element-3">
+        <h2>Service #3</h2>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
